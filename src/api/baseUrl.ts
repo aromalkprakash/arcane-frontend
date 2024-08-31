@@ -1,1 +1,1 @@
-export const base_Url = "http://localhost:5000/api";
+export const base_Url = "https://arcane-backend.onrender.com/api";
