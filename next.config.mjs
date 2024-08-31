@@ -6,13 +6,23 @@ const nextConfig = {
     eslint: {
         ignoreDuringBuilds: true,
     },
+    api: {
+        // Enable API routes
+        externalResolver: true,
+      },
+      proxy: {
+        '/api': {
+          target: 'https://arcane-backend.onrender.com',
+          changeOrigin: true,
+          pathRewrite: { '^/api': '' },
+        },
+      },    
     images: {
         domains: ["res.cloudinary.com"],
     },
     sassOptions: {
         cache: false,
     },
-    
     
 };
 
