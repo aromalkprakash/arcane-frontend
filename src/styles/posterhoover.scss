@@ -1,0 +1,49 @@
+.poster {
+  width: 120px;
+  height: 200px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  margin-top: 35px;
+  gap: 2px;
+  transition: transform 0.3s ease, border 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    z-index: 1;
+  }
+}
+
+.poster-gap{
+  padding: 8px;
+}
+
+
+
+
+  @media(max-width: 431px){
+    .poster {
+      width: 80px;
+      height: 120px;
+      border-radius: 2px;
+      display: flex;
+      margin-top: 0px;
+      gap: 1px !important;
+      transition: transform 0.3s ease, border 0.3s ease;
+    
+      &:hover {
+        transform: scale(1.1);
+        border: 3px solid rgb(0, 0, 0);
+        border-radius: 5px;
+        z-index: 1;
+      }
+    }
+    
+    .poster-gap{
+      padding: 4px !important;
+    }
+  }
+

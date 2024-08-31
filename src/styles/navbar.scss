@@ -1,0 +1,109 @@
+.navbar-container {
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  width: 100%;
+  margin: 0 auto;;
+  // background-color: rgba($color: #ffffff00, $alpha: 0.5);
+  // backdrop-filter: blur(10px);
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 22px;
+}
+
+.navbar-logo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  .nav-line {
+    font-family: 'Avenir';
+    font-size: 17px;
+    font-weight: 400;
+    position: relative;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffffff;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  }
+}
+
+.menu-icon-btn {
+  display: none; 
+}
+
+@media(max-width: 650px) {
+  .nav-line {
+    display: none; /* Hide links on small screens */
+  }
+
+  .menu-icon-btn {
+    display: block; /* Show menu icon button on small screens */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 80%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.552);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+  }
+
+  .sidebar-item {
+    width: 100%;
+    color: #000000;
+  }
+
+  .sidebar {
+    transform: translateX(0); 
+  }
+  
+}
+ .no-scroll {
+    overflow: hidden;
+  }

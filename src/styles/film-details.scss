@@ -1,0 +1,381 @@
+.movie-reviews-are-here{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.movie-details-page,
+.movie-review-page{
+  background-color: #000;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.review-title-div{
+  display: flex;
+  justify-content: center;
+}
+.review-title{
+  font-family: 'Avenir';
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.review-grid{
+  margin-left: 100px;
+  margin-right: 100px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-content: center;
+}
+
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; 
+    background: linear-gradient(to bottom, rgba(55, 54, 54, 0) 0%, rgb(0, 0, 0) 100%);
+    pointer-events: none; 
+  }
+
+}
+
+.navbar{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+
+.poster-container {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  .poster-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+}
+
+.movie-details-bg {
+    background-color: black;
+    padding-bottom: 2rem;
+   
+  .blur-interface {
+    backdrop-filter: blur(1000px);
+  }
+  
+    .movie-details-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: -150px;
+      padding: 2rem 1rem;
+      background-color: rgb(0, 0, 0);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+     
+      .movie-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+       margin-left: 30px;
+       z-index: 1;
+  
+        .title-movie {
+          font-family: "Cambon";
+          font-weight: 100;
+          font-size: 40px;
+          z-index: 1;
+        }
+        
+        .movie-detail-director {
+          
+          font-size: 17px;
+          .dir{
+            font-family: "Avenir";
+            font-weight: 0;
+            font-size: 20px;
+                 &:hover{
+                   text-decoration: underline;
+          }
+          }
+          
+        }
+      
+        .description{
+          font-family: "Avenir";
+          min-width: 200px;
+          max-width: 400px;
+          z-index: 1;
+        }
+        .release-yr {
+          font-size: 18px;
+          font-weight: 100;
+          font-style: italic;
+          margin-top: 0.5rem;
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+
+        .duration{
+          font-size: 18px;
+          font-weight: 100;
+          font-style: italic;
+          margin-top: 0.5rem;
+        }
+
+
+        .movie-detail-cast{
+          min-width: 200px;
+          max-width: 400px;
+        }
+
+        .actor-name {
+          color: #fff;
+          text-decoration: none; 
+        }
+        
+        .actor-name:hover {
+          text-decoration: underline; 
+          cursor: pointer; 
+        }
+      }
+      }
+    }
+
+   
+    .aae{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      margin-left: 30px;
+      width: 150px;
+      height: 200px;
+      padding: 20px;
+      z-index: 1;
+   
+     
+       
+    .add-review-bt,
+    .edit-button {
+        font-family: 'Avenir';
+        color: #000;
+        }
+
+    .icons{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 8px;
+      }
+   }
+
+   .no-review-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+  }
+
+
+  .movie-review-more-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    
+    .movie-review-more{
+      font-family: "Avenir";
+      // margin-top: 1rem;
+      // // marg
+      width: 200px;
+      background-color: #ffffff;
+      color: rgb(0, 0, 0);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+  
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          transition: all 0.3s ease-in-out;
+          }
+       }
+  }
+
+  .phone-poster-container{
+    display: none;
+  }
+
+//  ---------------- dialog text area ------------------
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+
+  &:focus {
+    width: 100%;
+    height: 150px; 
+    border-color: #000;
+    outline: none;
+  }
+}
+
+
+@media (max-width:650px){
+  .review-grid{
+    // margin-left: 100px;
+    // margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navbar{
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    z-index: 1;
+  }
+
+  .movie-reviews-are-here{
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+
+  
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+
+  .banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; 
+    background: linear-gradient(to bottom, rgba(55, 54, 54, 0) 0%, rgb(0, 0, 0) 100%);
+    pointer-events: none; 
+  }
+
+}
+
+.poster-container{
+  display: none;
+}
+
+  .phone-poster-container{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    top: 0;
+    right: 0;
+    margin-top: 400px;
+    margin-right: 10px;
+    width: 100px;
+    height: 140px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+  .poster-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  }
+
+  .movie-details-content {
+    margin-left: 10px;
+    .movie-info {
+      display: flex;
+      flex-direction: column;
+      // justify-content: flex-start;
+       margin-left: 50px;
+  
+        .title-movie {
+          font-family: "Cambon";
+          font-weight: 100;
+          font-size: 10px;
+          z-index: 1;
+        }
+        
+        .movie-detail-director {
+          font-family: "Avenir";
+          font-weight: 0;
+          font-size: 17px;
+        }
+      
+        .description{
+          font-family: "Avenir";
+        }
+        .release-yr {
+          font-size: 18px;
+          font-weight: 100;
+          font-style: italic;
+          margin-top: 0.5rem;
+        }
+      }
+  }
+ 
+
+    .aae{
+      margin-right: 30px;
+      background-color: black;
+}
+    .add-review-bt,
+    .edit-button {
+        font-family: 'Avenir';
+        color: #000000;
+        background-color: #fff;
+        font-size: 12px;
+        height: 20px;
+        width: 100px;
+        }
+
+}

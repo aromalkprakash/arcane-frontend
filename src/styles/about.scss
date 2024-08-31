@@ -1,0 +1,28 @@
+.about{
+    background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-div{
+    background-color: #fff;
+    padding: 200px;
+    border-radius: 5px;
+}
+.about-h1{
+    font-size: 25px;
+    font-weight: 500;
+    color: #000;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.about-p{
+    width: 700px;
+    font-family: 'Avenir';
+    background-color: #fff;
+    color: #000;
+    text-align:justify;
+}

@@ -1,0 +1,93 @@
+.latestfilms-grid {
+  width: 100%;
+  height: 350px;
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  background-color: #ffffff;
+  overflow: auto;
+  justify-content: center; 
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+
+  &::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+
+}
+
+.popular-films{
+  background-color: #ffffff;
+}
+
+.latest-films-h1{
+  // font-family: 'Cambon';
+  font-weight: 200;
+  font-size: 55px; 
+  display: flex;
+  justify-content: center;
+  margin-top: 1.25rem;
+  // margin-left: 255px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.fav-films-h1{
+  font-size: 20px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.h1-hr{
+  margin-left: 250px;
+  margin-right: 950px;
+}
+
+@media (max-width:390px){
+  .latestfilms-grid{
+    width: 100%;
+    padding-left: 326px !important;
+  }
+}
+
+@media(max-width: 431px){
+  .latestfilms-grid{
+    display: flex;
+    padding-left: 295px;
+    flex-direction: row;
+    align-items: center;
+    height: 150px;
+    background-color: #fff; /* Allow horizontal scrolling */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */ /* Add this */
+
+  
+    &::-webkit-scrollbar {
+      display: none; /* Hide scrollbar */
+    }
+  
+  }
+  
+  .popular-films{
+    background-color: #ffffff;
+  }
+  
+  .latest-films-h1{
+    font-weight: 100;
+    font-size: 20px; 
+    margin-top: 5px;
+    margin-left: 12px;
+    margin-bottom: 3px;
+    color: #000000;
+  }
+  
+  .h1-hr{
+    margin-left: 14px;
+    margin-right: 300px;
+  }
+  
+}

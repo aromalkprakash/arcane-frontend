@@ -1,0 +1,60 @@
+.dd-name {
+  font-family: 'Avenir';
+  font-size: 17px;
+  position: relative;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  &:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+// General styling for the dropdown container
+.dropdown-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; // Space between the avatar and username
+}
+
+
+// Style for the user avatar
+.avatar {
+  width: 30px; // Adjust as needed
+  height: 30px; // Adjust as needed
+  border: 2px solid #ddd; // Optional: border around the avatar
+  border-radius: 50%; // Circular avatar
+  overflow: hidden;
+}
+
+.li{
+background-color: #fff;
+color: #000;
+&:hover {
+  background-color: #000;
+  color: #fff;
+}}
+
+@media(max-width: 431px){
+  .dd-name{
+    display: none;
+  }
+
+  .user-avatar{
+    display: none;
+  }
+}

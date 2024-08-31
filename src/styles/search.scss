@@ -1,0 +1,121 @@
+.search-bar {
+    position: relative;
+    display: flex;
+  }
+  
+  .search-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .search-icon {
+    font-size: 22px;
+  }
+  
+  .search-form {
+    display: flex;
+    margin-left: 10px;
+  }
+  
+  .search-input {
+    height: 36px;
+    padding: 8px;
+    border: 2px solid #ffffff;
+    border-radius: 15px;
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .search-submit-btn {
+    padding: 8px;
+    margin-left: 2px;
+    width: 36px; /* Adjust size to your preference */
+    height: 36px; /* Same as width to make it round */
+    border: none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-radius: 50%; /* Makes the button round */
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+  
+
+  .filter-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+    // width: 300px;
+    // background-color: #fff;
+    // color: #000;
+
+    .all-results-btn,
+    .users-btn,
+    .films-btn {
+      background-color: #fff;
+      color: #000000;
+      padding: 0 15px;
+      border-radius: 2px;
+    }
+  }
+
+
+  
+@media(max-width: 431px){
+    .search-bar {
+        position: relative;
+        display: flex;
+      }
+      
+      .search-icon-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+
+      }
+      
+      .search-icon {
+        font-size: 30px;
+      }
+      
+      .search-form {
+        display: flex;
+        margin-left: 5px;
+        flex-basis: 100%;
+      }
+      
+      .search-input {
+        height: 30px;
+        width: 100px;
+        padding: 8px;
+        border: 2px solid #ffffff;
+        border-radius: 15px;
+        color: #000000;
+        background-color: rgb(255, 255, 255);
+      }
+      
+      .search-submit-btn {
+        padding: 8px;
+        margin-left: 2px;
+        width: 30px; /* Adjust size to your preference */
+        height: 30px; /* Same as width to make it round */
+        border: none;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        border-radius: 50%; /* Makes the button round */
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+      }
+      
+  }
+  

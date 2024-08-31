@@ -1,0 +1,17 @@
+.first-slide {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 1rem; /* Optional: add some space between slides */
+}
+
+.first-slide .slide {
+    flex: 0 0 auto;
+    /* Add additional styling if needed */
+}
+
+.slide-img {
+    width: 100vw; /* 100% of the viewport width */
+    height: 100vh; /* 50% of the viewport height */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}

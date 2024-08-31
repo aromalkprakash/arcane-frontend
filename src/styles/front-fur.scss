@@ -1,0 +1,316 @@
+.page{
+  background-color: #000;
+}
+
+.front-fr{
+  padding-left: 50px ;
+  padding-right: 50px;
+}
+
+.fu-review-page{
+  background-color: #000;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.review-grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  // margin-left: 100px;
+}
+
+.container{
+  background-color: #ffffff;
+  // background: opacity($color: #000);
+  // backdrop-filter: blur(100px);
+  justify-content: center;
+  width: 500px;
+  border-radius: 10px;
+  // padding-top: 5px;
+  // padding-bottom: 5px;
+}
+
+.following-review-title {
+  text-transform: none;
+  font-size: 50px;
+  font-weight: 200;
+  letter-spacing: -.005em;
+  line-height: 1.1;
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 10px;
+  }
+
+.user-review-poster {
+    width: 100px;
+    height: 140px;
+    overflow: hidden; 
+    position: relative;
+    gap: 2px;
+    margin-top: 10px;
+  
+    &:hover {
+      // transform: scale(1.1);
+      border: 3px solid rgb(0, 0, 0);
+    }
+  }
+  
+  .avatar {
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px; 
+    object-fit: cover; 
+    border: 2px solid #fff;
+  }
+
+  .movie-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .movie-title {
+    // font-family: 'Cambon';
+    font-weight: bold;
+    font-style: normal;
+    color: #000;
+    font-size: 25px;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .movie-title:hover {
+    color: rgb(255, 0, 0);
+  }
+  
+    
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 10px;
+    margin-bottom: 0.5rem;
+   }
+    .user-avatar {
+      margin-right: 0.2rem;
+    }
+  
+    .fullname {
+      font-family: 'Avenir';
+      color: #000;
+      font-weight: 500;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-weight: 500;
+    }
+  
+ 
+    .rating-div{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  
+      .rating{
+        font-size: 13px;
+        margin-left: 4px;
+        color: #000;
+      }
+    }
+
+  .review-text {
+    font-family: "Avenir";
+    color: #000;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }
+
+  .show-more-button {
+    background: none;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+    font-size: 13px;
+  }
+  
+  .show-more-button:hover {
+    text-decoration: underline;
+  }
+ 
+  .icons{
+    
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-bottom: 10px;
+ 
+  .like-text{
+    font-family: 'Avenir';
+    font-size: 12px;
+    color: #000;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+.rfmb{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  .review-for-more{
+    font-family: "Avenir";
+    margin-top: 1rem;
+    width: 200px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+        }
+      }
+    }
+    
+    .no-review-div{
+    }
+
+    .no-review-p{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+    }
+//////////////////////////////////////////////////////////////////////
+
+  @media(max-width: 450px){
+
+    .review-grid{
+      margin-left: 200px;
+      // margin-right: 100px;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(1,1fr);
+
+    }
+
+    .review-item{
+       position: relative;
+       right: 100px;
+    }
+    
+    .container{
+      // background-color: #fd0000;
+      // background: opacity($color: #000000);
+      // backdrop-filter: blur(100px);
+      justify-content: flex-start;
+      margin-left: 5px;
+      margin-right: 5px;
+      width: 350px ;
+    }
+    
+    .following-review-title {
+      text-transform: none;
+      font-size: 25px;
+      font-weight: 100;
+      letter-spacing: -.005em;
+      line-height: 1.1;
+      margin-top: 1.25rem;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      }
+
+
+      .fur-fullname{
+        font-family: 'Avenir';
+        font-weight: 500;
+      }
+    
+    .user-review-poster {
+        width: 100px;
+        height: 140px;
+        overflow: hidden; 
+        position: relative;
+        gap: 2px;
+      }
+        
+      .movie-info {
+        display: flex;
+        flex-direction: column;
+        max-width: 250px;
+        margin-right: 0;
+      }
+      
+      
+      .movie-title {
+        font-family: 'Cambon';
+        font-weight: 1000;
+        font-style: normal;
+        font-size: 25px;
+        margin-bottom: 0.5rem;
+        transition: color 0.3s ease;
+      }
+      
+      .movie-title:hover {
+        color: rgb(132, 25, 25); 
+      }
+    
+        
+      .user-info {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.5rem;
+      
+        .user-avatar {
+          margin-right: 0.2rem;
+        }
+      
+        .fullname {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          font-weight: 500;
+        }
+      
+      }
+        .review-rating {
+          font-size: 14px;
+          display: flex;
+          flex-direction: column;
+          color: #fff700;
+        }
+    
+      .fur-review-text {
+        font-family: 'Avenir';
+        font-weight: 400;
+        font-size: 14.875px;
+        margin-top: 0.5rem;
+      }
+    
+      .show-more-button {
+        background: none;
+        border: none;
+        color: #ffffff; /* Adjust as needed */
+        cursor: pointer;
+        margin-top: 8px;
+        font-size: 0.9rem;
+      }
+  }
+
+
+  // @media(min-width:430px) {
+  //   .review-item{
+  //     position: relative;
+  //     right: 75px;
+  //  }
+  // }

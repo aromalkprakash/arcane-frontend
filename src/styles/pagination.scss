@@ -1,0 +1,19 @@
+.fr-pagination{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 20px;
+    background-color: black;
+}
+
+.pagination-btn{
+    font-family: 'Avenir';
+    font-size: 13px;
+    border-radius: 4px;
+    width: 100px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: rgb(255, 255, 255);
+}
